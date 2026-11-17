@@ -56,13 +56,14 @@ public sealed class PhdApplicationsController : Controller
     // 2. Return a CreatePhdApplicationViewModel instead of the PhdApplication entity.
     // See LabResources/code-snippets.md (Snippet 2.A and Snippet 2.B) for the complete code.
     [HttpGet]
-    public IActionResult Create()
+    public async Task<IActionResult> Create(
+        CancellationToken cancellationToken = default)
     {
-        return View(new PhdApplication
-        {
-            SubmittedDate = DateTime.UtcNow.Date,
-            ProposedStartDate = new DateTime(DateTime.UtcNow.Year + 1, 10, 1)
-        });
+        ViewBag.Supervisors =
+            await _phdApplicationService.GetEligibleMainSupervisorsAsync(
+                cancellationToken);
+
+        return View(new CreatePhdApplicationViewModel());
     }
 
     // TODO (Lab Part 2 & Part 6):

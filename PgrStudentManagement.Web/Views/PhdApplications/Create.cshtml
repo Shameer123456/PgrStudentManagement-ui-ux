@@ -1,4 +1,4 @@
-@model PgrStudentManagement.Web.Modules.PhdApplications.Models.PhdApplication
+@model PgrStudentManagement.Web.Modules.PhdApplications.Models.CreatePhdApplicationViewModel
 
 @*
     ===========================================================================
@@ -36,17 +36,6 @@
 @* TODO (Lab Part 7): Add the accessible error summary box here (see Snippet 7.A in code-snippets.md) *@
 
 <form asp-action="Create" method="post">
-
-    @* TODO (Lab Part 1 - Task 2): Replace <span class="form-label"> with <label asp-for="..." class="form-label"></label> (Snippet 1.B).
-       TODO (Lab Part 2): Remove ApplicationReference from the form — generate it on the server instead! *@
-    <div class="mb-3">
-        <label asp-for="ApplicationReference" class="form-label"></label>
-        <input type="text"
-               id="ApplicationReference"
-               name="ApplicationReference"
-               value="@Model.ApplicationReference"
-               class="form-control" />
-    </div>
 
     @* TODO (Lab Part 1 - Task 2): Replace each <span class="form-label"> with <label asp-for="..." class="form-label"></label> (Snippet 1.B).
        TODO (Lab Part 3 & Part 4): Replace EmailAddress with type="email" (Snippet 3.A), wrap Section 1 in
@@ -153,16 +142,6 @@
                id="ProposedSupervisorStaffNumber"
                name="ProposedSupervisorStaffNumber"
                value="@Model.ProposedSupervisorStaffNumber"
-               class="form-control" />
-    </div>
-
-    @* TODO (Lab Part 2): Remove SubmittedDate from the form — set it automatically on the server! *@
-    <div class="mb-3">
-        <label asp-for="SubmittedDate" class="form-label"></label>
-        <input type="text"
-               id="SubmittedDate"
-               name="SubmittedDate"
-               value="@Model.SubmittedDate.ToString("yyyy-MM-dd")"
                class="form-control" />
     </div>
 
