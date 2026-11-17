@@ -40,7 +40,7 @@
     @* TODO (Lab Part 1 - Task 2): Replace <span class="form-label"> with <label asp-for="..." class="form-label"></label> (Snippet 1.B).
        TODO (Lab Part 2): Remove ApplicationReference from the form — generate it on the server instead! *@
     <div class="mb-3">
-        <span class="form-label">ApplicationReference</span>
+        <label asp-for="ApplicationReference" class="form-label"></label>
         <input type="text"
                id="ApplicationReference"
                name="ApplicationReference"
@@ -52,7 +52,7 @@
        TODO (Lab Part 3 & Part 4): Replace EmailAddress with type="email" (Snippet 3.A), wrap Section 1 in
        <section class="form-section">, and pair FirstName/LastName side-by-side in <div class="form-grid-2"> (Snippet 4.B). *@
     <div class="mb-3">
-        <span class="form-label">FirstName</span>
+        <label asp-for="FirstName" class="form-label"></label>
         <input type="text"
                id="FirstName"
                name="FirstName"
@@ -61,7 +61,7 @@
     </div>
 
     <div class="mb-3">
-        <span class="form-label">LastName</span>
+        <label asp-for="LastName" class="form-label"></label>
         <input type="text"
                id="LastName"
                name="LastName"
@@ -70,7 +70,7 @@
     </div>
 
     <div class="mb-3">
-        <span class="form-label">EmailAddress</span>
+        <label asp-for="EmailAddress" class="form-label"></label>
         <input type="text"
                id="EmailAddress"
                name="EmailAddress"
@@ -81,7 +81,7 @@
     @* TODO (Lab Part 1 - Task 2): Replace <span class="form-label"> with <label asp-for="ProgrammeCode" class="form-label"></label>.
        TODO (Lab Part 3 & Part 4): Replace ProgrammeCode text input with a <select> dropdown (Snippet 3.B) and size it with .input-width-md (Snippet 4.B) *@
     <div class="mb-3">
-        <span class="form-label">ProgrammeCode</span>
+        <label asp-for="ProgrammeCode" class="form-label"></label>
         <input type="text"
                id="ProgrammeCode"
                name="ProgrammeCode"
@@ -92,7 +92,7 @@
     @* TODO (Lab Part 3): Replace ModeOfStudy text input with radio buttons ("Full-time", "Part-time")
        wrapped in a <fieldset> and <legend> (see Snippet 3.B in code-snippets.md). *@
     <div class="mb-3">
-        <span class="form-label">ModeOfStudy</span>
+        <label asp-for="ModeOfStudy" class="form-label"></label>
         <input type="text"
                id="ModeOfStudy"
                name="ModeOfStudy"
@@ -103,7 +103,7 @@
     @* TODO (Lab Part 1 - Task 2): Replace <span class="form-label"> with <label asp-for="ProposedStartDate" class="form-label"></label>.
        TODO (Lab Part 3 & Part 4): Replace ProposedStartDate with <input type="date"> (Snippet 3.B) and size it with .input-width-sm (Snippet 4.B) *@
     <div class="mb-3">
-        <span class="form-label">ProposedStartDate</span>
+        <label asp-for="ProposedStartDate" class="form-label"></label>
         <input type="text"
                id="ProposedStartDate"
                name="ProposedStartDate"
@@ -113,7 +113,7 @@
 
     @* TODO (Lab Part 1 - Task 2): Replace <span class="form-label"> with <label asp-for="ProposedThesisTitle" class="form-label"></label>. *@
     <div class="mb-3">
-        <span class="form-label">ProposedThesisTitle</span>
+        <label asp-for="ProposedThesisTitle" class="form-label"></label>
         <input type="text"
                id="ProposedThesisTitle"
                name="ProposedThesisTitle"
@@ -125,7 +125,7 @@
        TODO (Lab Part 5): Replace ResearchSummary with a <textarea rows="6">, a hint linked via
        aria-describedby, and a live character counter (see Snippet 5.A & 5.B in code-snippets.md). *@
     <div class="mb-3">
-        <span class="form-label">ResearchSummary</span>
+        <label asp-for="ResearchSummary" class="form-label"></label>
         <input type="text"
                id="ResearchSummary"
                name="ResearchSummary"
@@ -136,7 +136,7 @@
     @* TODO (Lab Part 3): Replace FundingSource text input with radio buttons inside a <fieldset>
        using Html.GetEnumSelectList<FundingType>() (see Snippet 3.C in code-snippets.md). *@
     <div class="mb-3">
-        <span class="form-label">FundingSource</span>
+        <label asp-for="FundingSource" class="form-label"></label>
         <input type="text"
                id="FundingSource"
                name="FundingSource"
@@ -148,7 +148,7 @@
        TODO (Lab Part 3, Part 4 & Part 5): Replace ProposedSupervisorStaffNumber text box with a <select> showing
        supervisor names from ViewBag.Supervisors, size with .input-width-md, and mark the label "(optional)" (see Snippet 3.D & 4.B). *@
     <div class="mb-3">
-        <span class="form-label">ProposedSupervisorStaffNumber</span>
+        <label asp-for="ProposedSupervisorStaffNumber" class="form-label"></label>
         <input type="text"
                id="ProposedSupervisorStaffNumber"
                name="ProposedSupervisorStaffNumber"
@@ -158,7 +158,7 @@
 
     @* TODO (Lab Part 2): Remove SubmittedDate from the form — set it automatically on the server! *@
     <div class="mb-3">
-        <span class="form-label">SubmittedDate</span>
+        <label asp-for="SubmittedDate" class="form-label"></label>
         <input type="text"
                id="SubmittedDate"
                name="SubmittedDate"
